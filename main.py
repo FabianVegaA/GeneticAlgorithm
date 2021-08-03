@@ -9,9 +9,9 @@ from src.genetic import GeneticAlgorithm
 def main():
 
     items = []
-    items_count = int(input("Enter items count: "))
-    for i in range(items_count):
-        worth, weight = input(f"{i}. Enter worth and weight: ").split()
+    n_items = int(input("Enter number of items: "))
+    for i in range(n_items):
+        worth, weight = input(f"{i+1}. Enter worth and weight: ").split()
         items.append(Object(int(worth), float(weight)))
 
     capacity = int(input("Enter knapsack capacity: "))
